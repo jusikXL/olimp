@@ -1,0 +1,423 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: black;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+}
+
+/*
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../fonts/Segoe UI.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('../fonts/Segoe UI Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('../fonts/Segoe UI Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('../fonts/Segoe UI Bold Italic.woff') format('woff');
+    }
+
+*/
+@media (max-width: 1400px) {
+  .EXAMPLE {
+    font-size: calc( ( 17 * 1px) + (20 - 17) * ((100vw - 320px) / (1400 - 320)));
+  }
+}
+
+@media (min-width: 1401px) {
+  .EXAMPLE {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .EXAMPLE {
+    padding-top: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+    padding-right: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+    padding-bottom: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+    padding-left: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+  }
+}
+
+@media (min-width: 1401px) {
+  .EXAMPLE {
+    padding-top: calc(40 * 1px);
+    padding-right: calc(40 * 1px);
+    padding-bottom: calc(40 * 1px);
+    padding-left: calc(40 * 1px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .EXAMPLE {
+    margin-top: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+    margin-right: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+    margin-bottom: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+    margin-left: calc( ( 20 * 1px) + (40 - 20) * ((100vw - 320px) / (1400 - 320)));
+  }
+}
+
+@media (min-width: 1401px) {
+  .EXAMPLE {
+    margin-top: calc(40 * 1px);
+    margin-right: calc(40 * 1px);
+    margin-bottom: calc(40 * 1px);
+    margin-left: calc(40 * 1px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .EXAMPLE {
+    line-height: calc( ( 17 * 1px) + (20 - 17) * ((100vw - 320px) / (1400 - 320)));
+  }
+}
+
+@media (min-width: 1401px) {
+  .EXAMPLE {
+    line-height: 20px;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+.academia {
+  position: relative;
+  background: url(../images/1.png) center/cover no-repeat fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.academia__container {
+  z-index: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  max-width: 1290px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.academia:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.academia__title {
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  max-width: 575px;
+}
+
+@media (max-width: 1920px) {
+  .academia__title {
+    font-size: calc( ( 30 * 1px) + (49 - 30) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .academia__title {
+    font-size: 49px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .academia__title {
+    line-height: calc( ( 40 * 1px) + (58 - 40) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .academia__title {
+    line-height: 58px;
+  }
+}
+
+.academia__text {
+  font-family: 'Segoe UI';
+  font-size: 24px;
+  color: white;
+  margin-top: 50px;
+  max-width: 490px;
+}
+
+@media (max-width: 1920px) {
+  .academia__text {
+    font-size: calc( ( 15 * 1px) + (24 - 15) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .academia__text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .academia__text {
+    line-height: calc( ( 25 * 1px) + (38 - 25) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .academia__text {
+    line-height: 38px;
+  }
+}
+
+.academia__link {
+  display: inline-block;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  margin-top: 60px;
+  background-color: #FEE589;
+  padding: 0 60px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+@media (max-width: 1920px) {
+  .academia__link {
+    font-size: calc( ( 20 * 1px) + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .academia__link {
+    font-size: 26px;
+  }
+}
+
+.academia__link:hover {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  background-color: white;
+}
+
+.header {
+  z-index: 3;
+}
+
+@media (max-width: 1920px) {
+  .header {
+    margin-top: calc( ( 20 * 1px) + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .header {
+    margin-top: 45px;
+  }
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  font-family: 'Segoe UI';
+  font-size: 27px;
+  color: white;
+  padding: 16px 15px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (max-width: 1920px) {
+  .menu__item {
+    margin-top: calc( ( 0 * 1px) + (0 - 0) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: calc( ( 5 * 1px) + (50 - 5) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: calc( ( 0 * 1px) + (0 - 0) * ((100vw - 320px) / (1920 - 320)));
+    margin-left: calc( ( 5 * 1px) + (50 - 5) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .menu__item {
+    margin-top: calc(0 * 1px);
+    margin-right: calc(50 * 1px);
+    margin-bottom: calc(0 * 1px);
+    margin-left: calc(50 * 1px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__item {
+    padding: 16px 5px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .menu__item:last-child {
+    margin-top: calc( ( 0 * 1px) + (0 - 0) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: calc( ( 5 * 1px) + (165 - 5) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: calc( ( 0 * 1px) + (0 - 0) * ((100vw - 320px) / (1920 - 320)));
+    margin-left: calc( ( 5 * 1px) + (50 - 5) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .menu__item:last-child {
+    margin-top: calc(0 * 1px);
+    margin-right: calc(165 * 1px);
+    margin-bottom: calc(0 * 1px);
+    margin-left: calc(50 * 1px);
+  }
+}
+
+.menu__item:hover {
+  color: #FEE589;
+}
+
+@media (max-width: 1920px) {
+  .menu__item {
+    font-size: calc( ( 15 * 1px) + (27 - 15) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+@media (min-width: 1921px) {
+  .menu__item {
+    font-size: 27px;
+  }
+}
+
+.kaka {
+  height: 500vh;
+}

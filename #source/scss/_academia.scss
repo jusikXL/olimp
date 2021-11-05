@@ -1,0 +1,122 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+.academia {
+    position: relative;
+    background: url(../images/1.png) center / cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    &__container {
+        z-index: 2;
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 1290px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 1;
+    }
+
+    //&__content {
+    //}
+
+    &__title {
+        font-family: 'Segoe UI';
+        font-weight: bold;
+        @include text(49, 30, 1920);
+        @include line-height(58, 40, 1920);
+        text-transform: uppercase;
+        color: white;
+        max-width: 575px;
+    }
+
+    &__text {
+        font-family: 'Segoe UI';
+        font-size: 24px;
+        color: white;
+        margin-top: 50px;
+        max-width: 490px;
+        @include text(24, 15, 1920);
+        @include line-height(38, 25, 1920);
+    }
+
+    &__link {
+        display: inline-block;
+        font-family: 'Segoe UI';
+        font-weight: bold;
+        margin-top: 60px;
+        background-color: #FEE589;
+        padding: 0 60px;
+        line-height: 60px;
+        cursor: pointer;
+        @include text(26, 20, 1920);
+        &:hover{
+            transition: all .4s;
+            background-color: white;
+        }
+    }
+}
+
+.header {
+    
+    z-index: 3;
+    @media (max-width: 1920px) {
+        margin-top: calc( ( 20 * 1px) + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media (min-width: 1921px){
+        margin-top: 45px;
+    }
+    &__menu{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__menu ul{
+        display: flex;
+    }
+}
+.menu {
+    &__item {
+        flex: 0 1 25%;
+        font-family: 'Segoe UI';
+        font-size: 27px;
+        color: white;
+        @include margin(0, 50, 0, 50, 0, 5, 0, 5, 1920);
+        padding: 16px 15px;
+        @media (max-width: 768px) {
+            padding: 16px 5px;
+        }
+        cursor: pointer;
+        &:last-child{
+            @include margin(0, 165, 0, 50, 0, 5, 0, 5, 1920);
+        }
+        &:hover{
+            color: #FEE589;
+        }
+        transition: all .3s;
+        @include text(27, 15, 1920);
+    }
+}
+
+.kaka{
+    height: 500vh;
+}

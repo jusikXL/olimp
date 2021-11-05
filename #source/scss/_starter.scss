@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: black;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration:none;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight:400;}
+a{color: inherit;}
+
+
+/*
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../fonts/Segoe UI.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('../fonts/Segoe UI Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('../fonts/Segoe UI Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('../fonts/Segoe UI Bold Italic.woff') format('woff');
+    }
+
+*/
+
+
+
+
+@mixin text ($max, $min, $max-width) {
+    @media (max-width: ($max-width * 1px)) {
+        font-size: calc( ( #{$min} * 1px) + (#{$max} - #{$min}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        font-size: $max * 1px;
+    }
+}
+    
+.EXAMPLE{
+    @include text(20, 17, 1400);
+}
+
+
+
+
+@mixin padding($top, $right, $bottom, $left, $min-top, $min-right, $min-bottom, $min-left, $max-width){
+    @media (max-width: ($max-width * 1px)) {
+        padding-top: calc( ( #{$min-top} * 1px) + (#{$top} - #{$min-top}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        padding-right: calc( ( #{$min-right} * 1px) + (#{$right} - #{$min-right}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        padding-bottom: calc( ( #{$min-bottom} * 1px) + (#{$bottom} - #{$min-bottom}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        padding-left: calc( ( #{$min-left} * 1px) + (#{$left} - #{$min-left}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        padding-top: calc(#{$top} * 1px);
+        padding-right: calc(#{$right} * 1px);
+        padding-bottom: calc(#{$bottom} * 1px);
+        padding-left: calc(#{$left} * 1px);
+    }
+}
+    
+.EXAMPLE{
+    @include padding(40, 40, 40, 40, 20, 20, 20, 20, 1400);
+}
+
+
+
+
+
+@mixin margin($top, $right, $bottom, $left, $min-top, $min-right, $min-bottom, $min-left, $max-width){
+    @media (max-width: ($max-width * 1px)) {
+        margin-top: calc( ( #{$min-top} * 1px) + (#{$top} - #{$min-top}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        margin-right: calc( ( #{$min-right} * 1px) + (#{$right} - #{$min-right}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        margin-bottom: calc( ( #{$min-bottom} * 1px) + (#{$bottom} - #{$min-bottom}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        margin-left: calc( ( #{$min-left} * 1px) + (#{$left} - #{$min-left}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        margin-top: calc(#{$top} * 1px);
+        margin-right: calc(#{$right} * 1px);
+        margin-bottom: calc(#{$bottom} * 1px);
+        margin-left: calc(#{$left} * 1px);
+    }
+}
+.EXAMPLE{
+    @include margin(40, 40, 40, 40, 20, 20, 20, 20, 1400);
+}
+
+
+
+
+
+
+
+
+@mixin line-height ($max, $min, $max-width) {
+    @media (max-width: ($max-width * 1px)) {
+        line-height: calc( ( #{$min} * 1px) + (#{$max} - #{$min}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        line-height: $max * 1px;
+    }
+}
+.EXAMPLE{
+    @include line-height(20, 17, 1400);
+}
+
+
+
+
